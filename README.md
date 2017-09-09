@@ -1,0 +1,2 @@
+# Sociostar
+Application for Sociostar
