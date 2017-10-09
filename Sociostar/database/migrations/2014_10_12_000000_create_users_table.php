@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->text('address');
             $table->string('photo');
-            $table->integer('type');
+            $table->integer('type')->comment("1 = admin, 2 = ngo, 3 = fp, 4 = cust");
             $table->rememberToken();
             $table->timestamps();
         });

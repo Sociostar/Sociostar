@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
+    return redirect()->route('login');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

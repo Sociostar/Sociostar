@@ -59,31 +59,31 @@
                     <div class="signup-box">
                         <div class="logo"><img src="{{asset('images/logo-c.svg')}}" alt="" style="height: 40px;"></div>
 
-                        <form>
-
+                        <form action="{{ route('login') }}" method="post">
+                          {{ csrf_field() }}
                             <div class="form-group">
-                                <input type="text" maxlength="20" name="username" class="form-control" placeholder="Username">
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" maxlength="20" name="email" class="form-control" placeholder="Type your email here">
+                                <i class="ti-email" aria-hidden="true"></i>
+                                @if ($errors->has('email'))
+                                    <small>{{ $errors->first('email') }}</small>
+                                @endif
                             </div>
 
                             <div class="form-group">
-                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Type your password here">
                                 <i class="fa fa-lock" aria-hidden="true"></i>
-                                <div class="forgot"><a href="user-forgotpassword.php">Forgot?</a></div>
+                                @if ($errors->has('password'))
+                                    <small>{{ $errors->first('password') }}</small>
+                                @endif
+                                <div class="forgot"><a href="{{ route('password.request') }}">Forgot?</a></div>
                             </div>
-
-                            <div class="checkbox checkbox-primary">
-                                <input id="rememberMe" class="styled" type="checkbox" checked>
-                                <label for="rememberMe"> Stay signed in</label>
-                            </div>
-
                             <button href="#" type="submit" class="btn btn-primary btn-block">Create account</button>
                         </form>
                     </div>
 
                     <br>
                     <div class="signup-box">
-                        <p class="signac animated flipInX">Don't have an account? <a href="user-signup.php">Sign up</a></p>
+                        <p class="signac animated flipInX">Don't have an account? <a href="{{ route('register') }}">Sign up</a></p>
                     </div>
 
                     <div class="blue-line lg normal"></div>

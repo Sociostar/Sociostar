@@ -109,7 +109,16 @@
                 <ul class="dropdown-menu dropdown-animated pop-effect" role="menu">
                     <li><a href="user-profile.html"><i class="sli-user"></i> My Profile</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="user-login.html"><i class="sli-logout"></i> Logout</a></li>
+                    <li>
+                      <a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                        <i class="sli-logout"></i>Logout
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form></li>
                 </ul>
             </li>
 
