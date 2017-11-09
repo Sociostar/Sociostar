@@ -18,6 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('phone')->unique();
+            $table->text('address');
+            $table->string('photo')->default('avatar/default.png');
+            $table->tinyInteger('type')->default(1)->comment('0 = admin, 1 = User, 2 = NGO');
             $table->rememberToken();
             $table->timestamps();
         });
