@@ -3,75 +3,106 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+        <div class="col l8 push-l2">
+          <div class="row">
+            <div class="col s12 m12">
+              <div class="card">
+                <div class="card-content">
+                  <span class="card-title">Daftar</span>
+                  <form class="form-horizontal" method="POST" action="{{ route('register')}}" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="input-field">
+                      <input type="text" name="name" id="name" required>
+                      <label for="name">Nama</label>
+                      @if ($errors->has('name'))
+                          <span class="red-text">
+                              <strong>{{ $errors->first('name') }}</strong>
+                          </span>
+                      @endif
+                    </div>
+                    <div class="input-field">
+                      <input type="email" name="email" id="email" required>
+                      <label for="email">Email</label>
+                      @if ($errors->has('email'))
+                          <span class="red-text">
+                              <strong>{{ $errors->first('email') }}</strong>
+                          </span>
+                      @endif
+                    </div>
+                    <div class="input-field">
+                      <input type="password" name="password" id="password" required>
+                      <label for="password">Password</label>
+                      @if ($errors->has('password'))
+                          <span class="red-text">
+                              <strong>{{ $errors->first('password') }}</strong>
+                          </span>
+                      @endif
+                    </div>
+                    <div class="input-field">
+                      <input type="password" name="password_confirmation" id="password-confirmation" required>
+                      <label for="password-confirmation">Konfirmasi Password</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="tel" name="phone" id="phone" required>
+                      <label for="phone">Telepon</label>
+                      @if ($errors->has('phone'))
+                          <span class="red-text">
+                              <strong>{{ $errors->first('phone') }}</strong>
+                          </span>
+                      @endif
+                    </div>
+                    <div class="input-field">
+                      <textarea name="address" id="address" class="materialize-textarea" required></textarea>
+                      <label for="address">Alamat</label>
+                      @if ($errors->has('address'))
+                          <span class="red-text">
+                              <strong>{{ $errors->first('address') }}</strong>
+                          </span>
+                      @endif
+                    </div>
+                    <div class="input-field">
+                      <select name="type">
+                        <option value="1" disabled selected>Apakah anda organisasi?</option>
+                        <option value="2">Ya</option>
+                        <option value="1">Tidak</option>
+                      </select>
+                    </div>
+                    <div class="input-field">
+                      <div class="file-field input-field">
+                        <div class="btn blue">
+                          <span>File</span>
+                          <input type="file" name="photo">
                         </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
                         </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        @if ($errors->has('photo'))
+                            <span class="red-text">
+                                <strong>{{ $errors->first('photo') }}</strong>
+                            </span>
+                        @endif
+                      </div>
+                    </div>
+                    <div class="input-field">
+                      <a href="{{route('login')}}">Sudah memiliki akun?</a>
+                    </div>
                 </div>
+                <div class="card-action">
+                  <button type="submit" class="btn blue">Daftar</button>
+                </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
     </div>
 </div>
 @endsection
+@push('js')
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#address').trigger('autoresize');
+    $('select').material_select();
+  });
+  </script>
+@endpush
