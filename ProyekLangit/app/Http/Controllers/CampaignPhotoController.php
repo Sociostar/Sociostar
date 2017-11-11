@@ -1,10 +1,10 @@
 <?php
 
-namespace ProyekLangit\Http\Controllers;
+namespace App\Http\Controllers;
 
-use ProyekLangit\CampaignPhoto;
+use App\CampaignPhoto;
 use Illuminate\Http\Request;
-
+use Storage;
 class CampaignPhotoController extends Controller
 {
     /**
@@ -41,7 +41,7 @@ class CampaignPhotoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
+     * @param  \App\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function show(CampaignPhoto $campaignPhoto)
@@ -52,7 +52,7 @@ class CampaignPhotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
+     * @param  \App\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function edit(CampaignPhoto $campaignPhoto)
@@ -64,7 +64,7 @@ class CampaignPhotoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
+     * @param  \App\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, CampaignPhoto $campaignPhoto)
@@ -75,11 +75,14 @@ class CampaignPhotoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
+     * @param  \App\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CampaignPhoto $campaignPhoto)
+    public function destroy(Request $request)
     {
-        //
+      $photo = CampaignPhoto::find($request->id);
+      Storage::disk('public')->delete($photo->photo);
+      $photo->delete();
+      return redirect(route('campaign.show',['campaign' => $photo->campaignId]));
     }
 }

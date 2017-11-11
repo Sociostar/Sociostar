@@ -1,8 +1,8 @@
 <?php
 
-namespace ProyekLangit\Http\Controllers;
+namespace App\Http\Controllers;
 
-use ProyekLangit\ItemPhoto;
+use App\ItemPhoto;
 use Illuminate\Http\Request;
 
 class ItemPhotoController extends Controller
@@ -41,7 +41,7 @@ class ItemPhotoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \ProyekLangit\ItemPhoto  $itemPhoto
+     * @param  \App\ItemPhoto  $itemPhoto
      * @return \Illuminate\Http\Response
      */
     public function show(ItemPhoto $itemPhoto)
@@ -52,7 +52,7 @@ class ItemPhotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \ProyekLangit\ItemPhoto  $itemPhoto
+     * @param  \App\ItemPhoto  $itemPhoto
      * @return \Illuminate\Http\Response
      */
     public function edit(ItemPhoto $itemPhoto)
@@ -64,7 +64,7 @@ class ItemPhotoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \ProyekLangit\ItemPhoto  $itemPhoto
+     * @param  \App\ItemPhoto  $itemPhoto
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ItemPhoto $itemPhoto)
@@ -75,7 +75,7 @@ class ItemPhotoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \ProyekLangit\ItemPhoto  $itemPhoto
+     * @param  \App\ItemPhoto  $itemPhoto
      * @return \Illuminate\Http\Response
      */
     public function destroy(ItemPhoto $itemPhoto)

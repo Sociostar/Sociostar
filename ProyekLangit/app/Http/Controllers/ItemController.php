@@ -1,8 +1,8 @@
 <?php
 
-namespace ProyekLangit\Http\Controllers;
+namespace App\Http\Controllers;
 
-use ProyekLangit\Item;
+use App\Item;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -41,7 +41,7 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \ProyekLangit\Item  $item
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
     public function show(Item $item)
@@ -52,7 +52,7 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \ProyekLangit\Item  $item
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
     public function edit(Item $item)
@@ -64,7 +64,7 @@ class ItemController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \ProyekLangit\Item  $item
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Item $item)
@@ -75,7 +75,7 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \ProyekLangit\Item  $item
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
     public function destroy(Item $item)

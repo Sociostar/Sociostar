@@ -1,9 +1,9 @@
 <?php
 
-namespace ProyekLangit\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use ProyekLangit\User;
+use App\User;
 use Storage;
 use Auth;
 class UserController extends Controller

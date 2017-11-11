@@ -22,4 +22,7 @@ Route::post('profile','UserController@update')->name('profile.update');
 //Campaign
 Route::resource('campaign','CampaignController');
 Route::get('campaignSelf','CampaignController@self')->name('campaign.self');
+//CampaignPhoto
+Route::delete('campaign/photo/delete/','CampaignPhotoController@destroy')->name('campaignPhoto.destroy');
+
 Route::get('/home', 'HomeController@index')->name('home');

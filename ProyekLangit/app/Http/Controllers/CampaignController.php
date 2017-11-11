@@ -1,9 +1,9 @@
 <?php
 
-namespace ProyekLangit\Http\Controllers;
+namespace App\Http\Controllers;
 
-use ProyekLangit\Campaign;
-use ProyekLangit\CampaignPhoto;
+use App\Campaign;
+use App\CampaignPhoto;
 use Illuminate\Http\Request;
 use Auth;
 use Storage;
@@ -16,7 +16,9 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        //
+        return view('campaign.index',[
+          'data' => Campaign::all()
+        ]);
     }
 
     public function self(){
@@ -44,9 +46,8 @@ class CampaignController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-          'name' => 'required|string|max:255',
+          'title' => 'required|string|max:255',
           'desc' => 'required|string',
-          'photo' => 'image',
         ]);
         $campaign = Campaign::create([
           'userId' => Auth::user()->id,
@@ -67,7 +68,7 @@ class CampaignController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \ProyekLangit\Campaign  $campaign
+     * @param  \App\Campaign  $campaign
      * @return \Illuminate\Http\Response
      */
     public function show(Campaign $campaign)
@@ -80,34 +81,58 @@ class CampaignController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \ProyekLangit\Campaign  $campaign
+     * @param  \App\Campaign  $campaign
      * @return \Illuminate\Http\Response
      */
     public function edit(Campaign $campaign)
     {
-        //
+        return view('campaign.edit',[
+          'data' => $campaign
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \ProyekLangit\Campaign  $campaign
+     * @param  \App\Campaign  $campaign
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Campaign $campaign)
     {
-        //
+        $request->validate([
+          'title' => 'required|string|max:255',
+          'desc' => 'required|string',
+        ]);
+        $campaign->title = $request->title;
+        $campaign->desc = $request->desc;
+        $campaign->save();
+        if(isset($request->photo)){
+          foreach ($request->photo as $photo) {
+            $path = $photo->store('campaign', 'public');
+            CampaignPhoto::create([
+              'campaignId' => $campaign->id,
+              'photo' => $path
+            ]);
+          }
+        }
+        return redirect(route('campaign.show',['campaign' => $campaign->id]));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \ProyekLangit\Campaign  $campaign
+     * @param  \App\Campaign  $campaign
      * @return \Illuminate\Http\Response
      */
     public function destroy(Campaign $campaign)
     {
-        //
+        foreach ($campaign->Photo as $row) {
+          $photo = CampaignPhoto::find($row->id);
+          Storage::disk('public')->delete($photo->photo);
+          $photo->delete();
+        }
+        $campaign->delete();
+        return redirect(route('campaign.self'));
     }
 }
