@@ -24,5 +24,9 @@ Route::resource('campaign','CampaignController');
 Route::get('campaignSelf','CampaignController@self')->name('campaign.self');
 //CampaignPhoto
 Route::delete('campaign/photo/delete/','CampaignPhotoController@destroy')->name('campaignPhoto.destroy');
-
+//Item
+Route::resource('item','ItemController');
+Route::get('itemSelf','ItemController@self')->name('item.self');
+//ItemPhoto
+Route::delete('item/photo/delete/','ItemPhotoController@destroy')->name('itemPhoto.destroy');
 Route::get('/home', 'HomeController@index')->name('home');

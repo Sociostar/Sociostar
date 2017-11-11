@@ -62,7 +62,7 @@
                     </div>
                     <div class="input-field">
                       <select name="type">
-                        <option value="1" disabled selected>Apakah anda organisasi?</option>
+                        <option value="1" disabled>Apakah anda organisasi?</option>
                         <option value="2">Ya</option>
                         <option value="1">Tidak</option>
                       </select>

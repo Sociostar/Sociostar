@@ -10,7 +10,7 @@
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{$row->title}}<i class="material-icons right">more_vert</i></span>
-            <p><a href="{{route('campaign.show',['campaign' => $row->id])}}">Lihat selengkapnya</a></p>
+            <p><a href="{{route('item.show',['item' => $row->id])}}">Lihat selengkapnya</a></p>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>

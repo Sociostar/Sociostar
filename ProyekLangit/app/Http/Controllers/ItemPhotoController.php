@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ItemPhoto;
 use Illuminate\Http\Request;
-
+use Storage;
 class ItemPhotoController extends Controller
 {
     /**
@@ -78,8 +78,11 @@ class ItemPhotoController extends Controller
      * @param  \App\ItemPhoto  $itemPhoto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ItemPhoto $itemPhoto)
+    public function destroy(Request $request)
     {
-        //
+        $photo = ItemPhoto::find($request->id);
+        Storage::disk('public')->delete($photo->photo);
+        $photo->delete();
+        return redirect(route('item.show',['item' => $photo->itemId]));
     }
 }

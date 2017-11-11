@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\ItemPhoto;
 use Illuminate\Http\Request;
-
+use Auth;
+use Storage;
 class ItemController extends Controller
 {
     /**
@@ -14,7 +16,15 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        return view('item.index',[
+          'data' => Item::all()
+        ]);
+    }
+
+    public function self(){
+      return view('item.self',[
+        'data' => Item::where('userId',Auth::id())->get()
+      ]);
     }
 
     /**
@@ -24,7 +34,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('item.create');
     }
 
     /**
@@ -35,7 +45,25 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+        'title' => 'required|string|max:255',
+        'desc' => 'required|string',
+        'price' => 'required|numeric'
+      ]);
+      $item = Item::create([
+        'userId' => Auth::user()->id,
+        'title' => $request->title,
+        'desc' => $request->desc,
+        'price' => $request->price,
+      ]);
+      foreach ($request->photo as $photo) {
+        $path = $photo->store('item', 'public');
+        ItemPhoto::create([
+          'itemId' => $item->id,
+          'photo' => $path
+        ]);
+      }
+      return redirect(route('item.self'));
     }
 
     /**
@@ -46,7 +74,9 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('item.show',[
+          'data' => $item
+        ]);
     }
 
     /**
@@ -57,7 +87,9 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        return view('item.edit',[
+          'data' => $item
+        ]);
     }
 
     /**
@@ -69,7 +101,23 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+      $request->validate([
+        'title' => 'required|string|max:255',
+        'desc' => 'required|string',
+        'price' => 'required|numeric'
+      ]);
+      $item->title = $request->title;
+      $item->desc = $request->desc;
+      $item->price = $request->price;
+      $item->save();
+      foreach ($request->photo as $photo) {
+        $path = $photo->store('item', 'public');
+        ItemPhoto::create([
+          'itemId' => $item->id,
+          'photo' => $path
+        ]);
+      }
+      return redirect(route('item.self'));
     }
 
     /**
@@ -80,6 +128,12 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+      foreach ($item->Photo as $row) {
+        $photo = ItemPhoto::find($row->id);
+        Storage::disk('public')->delete($photo->photo);
+        $photo->delete();
+      }
+      $item->delete();
+      return redirect(route('item.self'));
     }
 }
