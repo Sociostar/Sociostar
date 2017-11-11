@@ -29,4 +29,10 @@ Route::resource('item','ItemController');
 Route::get('itemSelf','ItemController@self')->name('item.self');
 //ItemPhoto
 Route::delete('item/photo/delete/','ItemPhotoController@destroy')->name('itemPhoto.destroy');
+//Transaction
+Route::post('transaction','TransactionController@store')->name('transaction.store');
+Route::get('transaction/self','TransactionController@self')->name('transaction.self');
+Route::get('transaction/history','TransactionController@history')->name('transaction.history');
+Route::post('/transaction/confirmation/{transaction}','TransactionController@confirmation')->name('transaction.confirmation');
+Route::delete('/transaction/delete/{transaction}','TransactionController@destroy')->name('transaction.destroy');
 Route::get('/home', 'HomeController@index')->name('home');

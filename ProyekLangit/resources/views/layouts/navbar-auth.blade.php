@@ -7,6 +7,7 @@
       @if(Auth::user()->type == 2)
         <li><a class="dropdown-button" href="#!" data-activates="kampamye">Kampanye</a></li>
       @endif
+      <li><a class="dropdown-button" href="#!" data-activates="transaction">Transaksi</a></li>
       <li><a class="dropdown-button" href="#!" data-activates="pengaturan">Pengaturan<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
@@ -38,4 +39,9 @@
 <ul id="katalog" class="dropdown-content">
   <li><a href="{{route('item.self')}}">Katalog saya</a></li>
   <li><a href="{{route('item.index')}}">Lihat katalog</a></li>
+</ul>
+<!-- Dropdown Transaksi -->
+<ul id="transaction" class="dropdown-content">
+  <li><a href="{{route('transaction.self')}}">Konfirmasi</a></li>
+  <li><a href="{{route('transaction.history')}}">Histori</a></li>
 </ul>
