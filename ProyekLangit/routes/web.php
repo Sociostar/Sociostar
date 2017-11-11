@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+//Profile
 Route::get('profile','UserController@edit')->name('profile.edit');
 Route::post('profile','UserController@update')->name('profile.update');
+//Campaign
+Route::resource('campaign','CampaignController');
+Route::get('campaignSelf','CampaignController@self')->name('campaign.self');
 Route::get('/home', 'HomeController@index')->name('home');

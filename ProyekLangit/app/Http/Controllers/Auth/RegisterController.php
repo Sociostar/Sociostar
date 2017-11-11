@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace ProyekLangit\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use ProyekLangit\User;
+use ProyekLangit\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Storage;
@@ -61,7 +61,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \ProyekLangit\User
      */
     protected function create(array $data)
     {

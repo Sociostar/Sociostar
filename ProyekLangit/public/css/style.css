@@ -1,3 +1,6 @@
 .full-width{
   width: 100%;
 }
+.full-height{
+  min-height: 864px;
+}

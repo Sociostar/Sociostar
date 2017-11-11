@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ProyekLangit\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use ProyekLangit\User;
 use Storage;
 use Auth;
 class UserController extends Controller
@@ -81,6 +81,9 @@ class UserController extends Controller
         $path = Auth::user()->photo;
         if (isset($request->photo)) {
           $path = $request->photo->store('avatar', 'public');
+        }
+        if($path != 'avatar/default.png'){
+          Storage::disk('public')->delete(Auth::user()->photo);
         }
         $user = User::find(Auth::user()->id);
         $user->name = $request->name;

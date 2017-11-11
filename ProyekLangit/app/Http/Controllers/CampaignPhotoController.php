@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ProyekLangit\Http\Controllers;
 
-use App\CampaignPhoto;
+use ProyekLangit\CampaignPhoto;
 use Illuminate\Http\Request;
 
 class CampaignPhotoController extends Controller
@@ -41,7 +41,7 @@ class CampaignPhotoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CampaignPhoto  $campaignPhoto
+     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function show(CampaignPhoto $campaignPhoto)
@@ -52,7 +52,7 @@ class CampaignPhotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\CampaignPhoto  $campaignPhoto
+     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function edit(CampaignPhoto $campaignPhoto)
@@ -64,7 +64,7 @@ class CampaignPhotoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CampaignPhoto  $campaignPhoto
+     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, CampaignPhoto $campaignPhoto)
@@ -75,7 +75,7 @@ class CampaignPhotoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CampaignPhoto  $campaignPhoto
+     * @param  \ProyekLangit\CampaignPhoto  $campaignPhoto
      * @return \Illuminate\Http\Response
      */
     public function destroy(CampaignPhoto $campaignPhoto)
