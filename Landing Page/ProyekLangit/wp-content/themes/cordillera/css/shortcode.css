@@ -1,0 +1,566 @@
+/*
+ * 1.0 Title
+ */
+
+.title-wrapper {
+	margin: 60px 0 40px;
+}
+
+.title-wrapper::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.module-title {
+	text-transform: uppercase;
+	font-size: 40px;
+	margin: 0;
+	color: #444;
+	display: inline;
+	position: relative;
+}
+
+.module-title.style2::before {
+	content: " ";
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	position: absolute;
+	top: 20px;
+	left: -45px;
+	opacity: .5;
+}
+
+.module-title.style2::after {
+	content: " ";
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	position: absolute;
+	top: 20px;
+	right: -45px;
+	opacity: .5;
+	
+}
+
+.module-description {
+	font-size: 1.3em;
+	margin: 0;
+}
+
+/*
+ * 2.0 Service
+ */
+
+.service-box {
+	overflow: hidden;
+}
+
+.service-box h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	font-weight: normal;
+}
+
+.service-box i {
+	font-size: 40px;
+	line-height: 80px;
+	background-color: #19cbcf;
+	color: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
+
+.service-box p {
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+/*.service-box a {
+	float: right;
+	font-size: 12px;
+	color: #888;
+}*/
+
+.service-box a {
+	color: inherit;
+}
+
+.service-box:hover a {
+	text-decoration: underline;
+}
+
+/*
+ * 2.1 Service Style 2
+ */
+
+.service-box.style2 {
+	position: relative;
+}
+
+.service-box.style2 img,
+.service-box.style2 i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+}
+
+.service-box.style2 i {
+	color: #bbb;
+	font-size: 50px;
+	line-height: 1;
+}
+
+.service-box.style2 h3 {
+	margin: 5px 0 5px 70px;
+}
+
+.service-box.style2 p {
+	margin-left: 70px;
+}
+
+
+/*
+ * 3.0 Slogan
+ */
+
+.btn-normal {
+	color: #fff;
+	background-color: #19cbcf;
+	min-width: 150px;
+	border: none;
+	padding: 8px 30px;
+	border-radius: 5px;
+}
+
+.btn-normal:hover {
+	
+}
+
+.btn-normal.line {
+	border: 1px solid #fff;
+	background-color: transparent;
+
+}
+
+.btn-normal.line:hover {
+	background-color: #fff;
+	color: #19cbcf;
+}
+
+
+/*
+ * 4.0 Portfolio
+ */
+
+
+
+.portfolio .row {
+	margin: 0;
+}
+
+.portfolio .col-md-3 {
+	padding: 0;
+}
+
+.portfolio-img-box {
+	position: relative;
+	background-color: #19cbcf;
+}
+
+.portfolio-info-box {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0;
+}
+
+.portfolio-img-box:hover .portfolio-info-box {
+	z-index: 9;
+	opacity: 1;
+}
+
+.portfolio-img-box:hover img {
+	opacity: .15;
+	transition: all .5s ease 0s;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+}
+
+.portfolio-img-box .portfolio-icon-box {
+	position: absolute;
+	top: 50%; left: 0;
+	margin-top: -25px;
+	width: 100%;
+	text-align: center;
+	transform:translateY(-80px);
+	-webkit-transform:translateY(-80px);
+	-o-transform:translateY(-80px);
+	opacity: 0;
+	transition: all .5s ease 0s;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+}
+
+.portfolio-icon-box a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	margin: 0 20px;
+	background-color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.portfolio-img-box:hover .portfolio-icon-box {
+	transform:translateY(0);
+	-webkit-transform:translateY(0);
+	-o-transform:translateY(0);
+	opacity: 1;
+	transition: all .5s ease 0s;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+}
+
+
+/*
+ * 5.0 Testimonial
+ */
+
+.testimonial-wrapper {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.testimonial-wrapper .carousel-control .fa {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #333;
+	text-align: center;
+	margin: 2px;
+}
+
+.testimonial-wrapper .carousel-control {
+	position: static;
+	opacity: .5;
+	text-shadow: none;
+}
+
+.testimonial-wrapper .carousel-control:hover {
+	opacity: 1;
+}
+
+.testimonial-wrapper .carousel-control.left,
+.testimonial-wrapper .carousel-control.right {
+	background: none;
+	width: auto;
+}
+
+.testimonial-wrapper .carousel-inner {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.testimonial-box {
+	margin-bottom: 20px;
+}
+
+.testimonial-author-wrapper {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.testimonial-author-wrapper img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	margin: 0 50px;
+}
+
+.testimonial-author {
+	
+}
+
+.testimonial-author p {
+	margin: 0;
+	
+}
+
+.testimonial-author i {
+	font-size: 16px;
+	margin-right: 3px;
+}
+
+.testimonial-content {
+	padding: 20px 0 20px 30px;
+	position: relative;
+	font-size: 2.4em;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.testimonial-content i {
+	position: absolute;
+	left: 0; top: 20px;
+	font-size: 24px;
+}
+
+/*
+ * 6.0 Blog List
+ */
+
+.bloglist-box {
+	background-color: #19cbcf;
+	color: #fff;
+}
+
+.bloglist-box .row {
+	margin: 0;
+}
+
+.bloglist-box .col-md-6 {
+	padding: 0;
+	height: 100%;
+}
+
+.bloglist-content {
+	width: 100%;
+	height: 100%;
+	padding: 50px 30px;
+}
+
+.bloglist-box .entry-category {
+	font-weight: bold;
+}
+
+.bloglist-box .entry-title {
+	color: #fff;s
+	margin: 5px 0;
+}
+
+.bloglist-box .entry-title:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.bloglist-box .entry-category {
+	font-size: 1.2em;
+}
+
+.bloglist-box .entry-catagory a,
+.bloglist-box .entry-meta a,
+.bloglist-box .entry-more {
+	color: #fff !important;
+}
+.entry-catagory a,
+.entry-meta a {
+color: #888!important;
+}
+
+.bloglist-box .entry-header {
+	margin-bottom: 15px;
+}
+
+.bloglist-box .entry-summary {
+	margin: 0 0 20px;
+}
+
+.entry-content .entry-catagory a,
+.entry-content .entry-meta a,
+.entry-content .entry-footer a {
+    color: #a0a0a0;
+}
+
+.entry-content .entry-catagory a:hover,
+.entry-content .entry-meta a:hover,
+.entry-content .entry-footer a:hover {
+    text-decoration: none;
+}
+
+.entry-content .list-pagition a {
+	color: #ccc;
+}
+
+.entry-content .list-pagition a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*
+ * 7.0 Clients
+ */
+
+.clients img {
+	opacity: .6;
+}
+
+.clients img:hover {
+	opacity: 1;
+}
+
+/*
+ * 8.0 Team
+ */
+
+.team-box {
+  text-align: center;
+  margin: 0 auto;
+  width: 240px;
+}
+
+.team-img-box {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.team-img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.team-info {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border:2px solid #ccc;
+  opacity: 0;
+  z-index: -1;
+  text-align: center;
+}
+
+.team-img-box:hover .team-info {
+  opacity: 1;
+  z-index: 2;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease; 
+}
+
+.team-info img {
+  width: 45%;
+  height: auto;
+}
+
+.team-info h4 {
+  color: #000;
+  font-size: 18px;
+  margin: 10% 0 5%;
+}
+
+.team-info h5 {
+  color: #a0a0a0;
+  font-size: 13px;
+  margin: 0 0 5%;
+}
+
+.team-sns {
+  text-align: center;
+  display: inline-block;
+  margin: 5% 0;
+}
+
+.team-sns a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #eee;
+  color: #595959;
+  margin: 3px;
+  padding-top: 3px;
+  font-size: 16px;
+}
+
+.team-sns a:hover {
+  color: #19cbcf;
+}
+
+/*
+ * 9.0 Skills
+ */
+
+.skill-box {
+  overflow:hidden;
+}
+
+.skill-title {
+  float: left;
+  width: 100px;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 2px 0 0;
+}
+
+.skill-box .progress {
+  margin-left: 100px;
+}
+
+.skill-box .progress {
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.skill-box .progress-bar {
+  text-align: right;
+  padding-right: 5px;
+  background-color: #19cbcf;
+}
+
+/*
+ * 10.0 Contact Form
+ */
+
+.homepage-half-wrapper {
+	background: url(../images/background-1.jpg) center no-repeat #e7e7e7;
+}
+
+.contact-form {
+	margin-left: 10px;
+}
+
+.contact-form fieldset {
+	border: none;
+	width: 100%;
+	font-size: 14px;
+	overflow: hidden;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	background-color: #fff;
+	border: 2px solid #ccc;
+	margin-bottom: 5px;
+	border-radius: 2px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	border-color: #19cbcf;
+}
+
+.contact-form input[type="submit"] {
+	color: #fff;
+	background-color: #19cbcf;
+	float: right;
+	width: 120px;
+	border: none;
+}

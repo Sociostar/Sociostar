@@ -1,0 +1,819 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cordillera 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-20 11:42+0800\n"
+"PO-Revision-Date: 2014-11-20 11:42+0800\n"
+"Last-Translator: shijun quan <support@mageewp.com>\n"
+"Language-Team: Magee <support@mageewp.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: "
+"\\cordillera\\\n"
+
+#: /admin/includes/class-options-framework-admin.php:90
+#: /admin/includes/class-options-framework-admin.php:91
+msgid "Theme Options"
+msgstr ""
+
+#: /admin/includes/class-options-framework-admin.php:198
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: /admin/includes/class-options-framework-admin.php:230
+msgid "Default options restored."
+msgstr ""
+
+#: /admin/includes/class-options-framework-admin.php:284
+msgid "Options saved."
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:470
+#: /includes/theme-functions.php:324
+msgid "choose column"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:471
+msgid "1 column"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:472
+msgid "2 columns"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:473
+msgid "3 columns"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:474
+msgid "4 columns"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:476
+msgid "Widget Area Name"
+msgstr ""
+
+#: /admin/includes/class-options-interface.php:481
+msgid "Add Item"
+msgstr ""
+
+#: /admin/includes/class-options-media-uploader.php:61
+#: /includes/theme-functions.php:279
+msgid "No file chosen"
+msgstr ""
+
+#: /admin/includes/class-options-media-uploader.php:64
+#: /admin/includes/class-options-media-uploader.php:117
+msgid "Upload"
+msgstr ""
+
+#: /admin/includes/class-options-media-uploader.php:66
+#: /admin/includes/class-options-media-uploader.php:118
+#: /includes/theme-functions.php:244
+#: /includes/theme-functions.php:254
+msgid "Remove"
+msgstr ""
+
+#: /admin/includes/class-options-media-uploader.php:69
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: /admin/includes/class-options-media-uploader.php:93
+msgid "View File"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr ""
+
+#: /admin/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr ""
+
+#: /comments.php:4
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: /comments.php:11
+#: /content-article.php:11
+#: /includes/theme-widget.php:907
+msgid "No comment"
+msgstr ""
+
+#: /comments.php:11
+msgid "Has one comment"
+msgstr ""
+
+#: /comments.php:11
+#: /content-article.php:11
+#: /includes/theme-widget.php:907
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: /comments.php:11
+#, php-format
+msgid "to &#8220;%s&#8221;"
+msgstr ""
+
+#: /comments.php:12
+msgid "You can "
+msgstr ""
+
+#: /comments.php:12
+msgid "leave a reply"
+msgstr ""
+
+#: /comments.php:12
+msgid " or "
+msgstr ""
+
+#: /comments.php:12
+msgid "Trackback"
+msgstr ""
+
+#: /comments.php:12
+msgid "this post."
+msgstr ""
+
+#: /comments.php:24
+msgid "Comment pages"
+msgstr ""
+
+#: /comments.php:54
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: /comments.php:67
+msgid "Your email address will not be published."
+msgstr ""
+
+#: /comments.php:70
+msgid "Write a Reply or Comment"
+msgstr ""
+
+#: /content-article.php:11
+#: /includes/theme-widget.php:907
+msgid "No comments yet"
+msgstr ""
+
+#: /content-article.php:11
+#: /includes/theme-widget.php:907
+msgid "1 comment"
+msgstr ""
+
+#: /content-article.php:12
+#: /includes/breadcrumbs.php:899
+#: /includes/breadcrumbs.php:925
+#: /includes/breadcrumbs.php:937
+#: /includes/breadcrumbs.php:959
+#: /includes/theme-functions.php:254
+#: /single.php:64
+msgid "Edit"
+msgstr ""
+
+#: /content-article.php:27
+#: /includes/theme-widget.php:912
+msgid "Read More"
+msgstr ""
+
+#: /footer.php:38
+#, php-format
+msgid ""
+"Powered by <a href=\"%s\" target=\"_blank\">WordPress</a>. Designed by <a "
+"href=\"%s\" target=\"_blank\">Magee Themes</a>."
+msgstr ""
+
+#: /header.php:44
+msgid "Toggle navigation"
+msgstr ""
+
+#: /includes/admin-options.php:44
+msgid "General Options"
+msgstr ""
+
+#: /includes/admin-options.php:50
+msgid "Favicon"
+msgstr ""
+
+#: /includes/admin-options.php:51
+#, php-format
+msgid ""
+"An icon associated with a URL that is variously displayed, as in a browser's "
+"address bar or next to the site name in a bookmark list. Learn more about <a "
+"href=\"%s\" target=\"_blank\">Favicon</a>"
+msgstr ""
+
+#: /includes/admin-options.php:56
+#, fuzzy
+msgid "Global Color"
+msgstr "全局颜色"
+
+#: /includes/admin-options.php:62
+msgid "404 Page Content"
+msgstr ""
+
+#: /includes/admin-options.php:69
+msgid "Custom CSS"
+msgstr ""
+
+#: /includes/admin-options.php:70
+msgid ""
+"The following css code will add to the header before the closing &lt;/"
+"head&gt; tag."
+msgstr ""
+
+#: /includes/admin-options.php:114
+#, fuzzy
+msgid "Home Page"
+msgstr "首页分栏"
+
+#: /includes/admin-options.php:118
+msgid "Enable Featured Homepage"
+msgstr ""
+
+#: /includes/admin-options.php:119
+#, php-format
+msgid ""
+"Active featured homepage Layout.  The standardized way of creating Static "
+"Front Pages: <a href=\"%s\" target=\"_blank\">Creating a Static Front Page</"
+"a>"
+msgstr ""
+
+#: /includes/admin-options.php:124
+msgid "Banner"
+msgstr ""
+
+#: /includes/admin-options.php:126
+msgid "Image Banner"
+msgstr ""
+
+#: /includes/admin-options.php:127
+msgid "Background Image"
+msgstr ""
+
+#: /includes/admin-options.php:128
+msgid "Text"
+msgstr ""
+
+#: /includes/admin-options.php:134
+msgid "Content Padding"
+msgstr ""
+
+#: /includes/admin-options.php:140
+msgid "Home Page Banner"
+msgstr ""
+
+#: /includes/admin-options.php:145
+msgid "No Banner"
+msgstr ""
+
+#: /includes/admin-options.php:146
+msgid "Image"
+msgstr ""
+
+#: /includes/admin-options.php:153
+msgid "NOTE:"
+msgstr ""
+
+#: /includes/admin-options.php:154
+#, php-format
+msgid ""
+"All sections in the homepage are widgets, so, go to Appearance-><a href=\"%s"
+"\">Widgets</a> to set the sections content."
+msgstr ""
+
+#: /includes/admin-options.php:158
+#, fuzzy
+msgid "Home Page Sections"
+msgstr "首页分栏"
+
+#: /includes/admin-options.php:166
+msgid "Header"
+msgstr ""
+
+#: /includes/admin-options.php:170
+msgid "Upload Logo"
+msgstr ""
+
+#: /includes/admin-options.php:178
+msgid "Footer"
+msgstr ""
+
+#: /includes/admin-options.php:182
+msgid "Enable Footer Widget Area"
+msgstr ""
+
+#: /includes/breadcrumbs.php:147
+msgid "Browse:"
+msgstr ""
+
+#: /includes/breadcrumbs.php:148
+#, fuzzy
+msgid "Home"
+msgstr "首页"
+
+#: /includes/breadcrumbs.php:149
+msgid "404 Not Found"
+msgstr ""
+
+#: /includes/breadcrumbs.php:150
+msgid "Archives"
+msgstr ""
+
+#: /includes/breadcrumbs.php:152
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: /includes/breadcrumbs.php:154
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: /includes/breadcrumbs.php:156
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: /includes/breadcrumbs.php:158
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: /includes/breadcrumbs.php:919
+msgid "Split"
+msgstr ""
+
+#: /includes/breadcrumbs.php:922
+msgid "Merge"
+msgstr ""
+
+#: /includes/metabox-options.php:36
+msgid "Cordillera Metabox Options"
+msgstr ""
+
+#: /includes/metabox-options.php:118
+msgid "Show Breadcrumb :"
+msgstr ""
+
+#: /includes/metabox-options.php:120
+msgid "Yes"
+msgstr ""
+
+#: /includes/metabox-options.php:120
+msgid "No"
+msgstr ""
+
+#: /includes/metabox-options.php:131
+msgid "Choose Sidebar Layout :"
+msgstr ""
+
+#: /includes/metabox-options.php:134
+msgid "right"
+msgstr ""
+
+#: /includes/metabox-options.php:135
+msgid "left"
+msgstr ""
+
+#: /includes/metabox-options.php:136
+msgid "both"
+msgstr ""
+
+#: /includes/metabox-options.php:137
+msgid "none"
+msgstr ""
+
+#: /includes/theme-functions.php:120
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: /includes/theme-functions.php:121
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: /includes/theme-functions.php:121
+msgid "(Edit)"
+msgstr ""
+
+#: /includes/theme-functions.php:124
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: /includes/theme-functions.php:150
+msgid "About Cordillera"
+msgstr ""
+
+#: /includes/theme-functions.php:151
+msgid "MageeWP Themes"
+msgstr ""
+
+#: /includes/theme-functions.php:152
+msgid "Tutorials"
+msgstr ""
+
+#: /includes/theme-functions.php:153
+msgid "FAQ"
+msgstr ""
+
+#: /includes/theme-functions.php:154
+msgid "Knowledge"
+msgstr ""
+
+#: /includes/theme-functions.php:155
+msgid "Support Forums"
+msgstr ""
+
+#: /includes/theme-functions.php:180
+#, php-format
+msgid " Page %s "
+msgstr ""
+
+#: /includes/theme-functions.php:259
+msgid "Background"
+msgstr ""
+
+#: /includes/theme-functions.php:310
+msgid "Layout"
+msgstr ""
+
+#: /includes/theme-functions.php:311
+msgid "boxed"
+msgstr ""
+
+#: /includes/theme-functions.php:312
+msgid "full width"
+msgstr ""
+
+#: /includes/theme-functions.php:317
+msgid "Padding top & bottom"
+msgstr ""
+
+#: /includes/theme-functions.php:323
+msgid "Column"
+msgstr ""
+
+#: /includes/theme-functions.php:327
+#: /includes/theme-widget.php:489
+msgid "columns"
+msgstr ""
+
+#: /includes/theme-functions.php:329
+msgid "column"
+msgstr ""
+
+#: /includes/theme-functions.php:342
+#, php-format
+msgid "Column %s width"
+msgstr ""
+
+#: /includes/theme-setup.php:29
+msgid "Primary Menu"
+msgstr ""
+
+#: /includes/theme-setup.php:350
+#: /includes/theme-setup.php:351
+msgid "Cordillera Options"
+msgstr ""
+
+#: /includes/theme-widget.php:6
+msgid "Default Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:14
+msgid "Displayed Everywhere"
+msgstr ""
+
+#: /includes/theme-widget.php:22
+msgid "Post Left Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:30
+msgid "Post Right Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:38
+msgid "Page Left Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:46
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:55
+msgid "Archive Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:64
+msgid "Page 404 Right Sidebar"
+msgstr ""
+
+#: /includes/theme-widget.php:124
+msgid "Footer Area One"
+msgstr ""
+
+#: /includes/theme-widget.php:132
+msgid "Footer Area Two"
+msgstr ""
+
+#: /includes/theme-widget.php:140
+msgid "Footer Area Three"
+msgstr ""
+
+#: /includes/theme-widget.php:171
+msgid "Button widget."
+msgstr ""
+
+#: /includes/theme-widget.php:173
+msgid "Cordillera: Button"
+msgstr ""
+
+#: /includes/theme-widget.php:184
+#: /includes/theme-widget.php:205
+msgid "Button Style"
+msgstr ""
+
+#: /includes/theme-widget.php:187
+msgid "Style 1"
+msgstr ""
+
+#: /includes/theme-widget.php:188
+msgid "Style 2"
+msgstr ""
+
+#: /includes/theme-widget.php:193
+msgid "Button Icon"
+msgstr ""
+
+#: /includes/theme-widget.php:194
+#: /includes/theme-widget.php:291
+msgid "Font Awesome Icon"
+msgstr ""
+
+#: /includes/theme-widget.php:197
+msgid "Button Text"
+msgstr ""
+
+#: /includes/theme-widget.php:201
+msgid "Button Link"
+msgstr ""
+
+#: /includes/theme-widget.php:208
+msgid "yes"
+msgstr ""
+
+#: /includes/theme-widget.php:209
+msgid "no"
+msgstr ""
+
+#: /includes/theme-widget.php:266
+msgid "Display service. Best for homepage section one "
+msgstr ""
+
+#: /includes/theme-widget.php:268
+msgid "Cordillera: Service"
+msgstr ""
+
+#: /includes/theme-widget.php:283
+msgid "Icon Type"
+msgstr ""
+
+#: /includes/theme-widget.php:286
+msgid "font"
+msgstr ""
+
+#: /includes/theme-widget.php:287
+msgid "image"
+msgstr ""
+
+#: /includes/theme-widget.php:296
+msgid "Image Icon Url"
+msgstr ""
+
+#: /includes/theme-widget.php:300
+#: /includes/theme-widget.php:429
+#: /includes/theme-widget.php:776
+#: /includes/theme-widget.php:953
+msgid "Title"
+msgstr ""
+
+#: /includes/theme-widget.php:304
+msgid "Title Link"
+msgstr ""
+
+#: /includes/theme-widget.php:308
+msgid "Content"
+msgstr ""
+
+#: /includes/theme-widget.php:369
+msgid "Divider for each row."
+msgstr ""
+
+#: /includes/theme-widget.php:371
+msgid "Cordillera: Divider"
+msgstr ""
+
+#: /includes/theme-widget.php:381
+msgid "Height"
+msgstr ""
+
+#: /includes/theme-widget.php:382
+msgid "Divider height"
+msgstr ""
+
+#: /includes/theme-widget.php:417
+msgid "Display section title."
+msgstr ""
+
+#: /includes/theme-widget.php:419
+msgid "cordillera: Section Title"
+msgstr ""
+
+#: /includes/theme-widget.php:434
+msgid "Sub-Title"
+msgstr ""
+
+#: /includes/theme-widget.php:476
+msgid "Display pages as portfolio."
+msgstr ""
+
+#: /includes/theme-widget.php:478
+msgid "cordillera: Portfolio"
+msgstr ""
+
+#: /includes/theme-widget.php:511
+#, php-format
+msgid "Page  %s"
+msgstr ""
+
+#: /includes/theme-widget.php:633
+msgid "cordillera testimonial."
+msgstr ""
+
+#: /includes/theme-widget.php:635
+msgid "cordillera: Testimonial"
+msgstr ""
+
+#: /includes/theme-widget.php:652
+#, php-format
+msgid "Name %s"
+msgstr ""
+
+#: /includes/theme-widget.php:657
+#, php-format
+msgid "Byline %s"
+msgstr ""
+
+#: /includes/theme-widget.php:663
+#, php-format
+msgid "Content %s"
+msgstr ""
+
+#: /includes/theme-widget.php:725
+msgid "Previous"
+msgstr ""
+
+#: /includes/theme-widget.php:729
+msgid "Next"
+msgstr ""
+
+#: /includes/theme-widget.php:749
+msgid "cordillera: Carousel"
+msgstr ""
+
+#: /includes/theme-widget.php:762
+msgid "Display Num"
+msgstr ""
+
+#: /includes/theme-widget.php:781
+msgid "Image URL"
+msgstr ""
+
+#: /includes/theme-widget.php:834
+msgid "Display latest blog."
+msgstr ""
+
+#: /includes/theme-widget.php:836
+msgid "cordillera: Blog"
+msgstr ""
+
+#: /includes/theme-widget.php:844
+msgid "Posts List Num"
+msgstr ""
+
+#: /includes/theme-widget.php:938
+msgid "cordillera: Social Icons"
+msgstr ""
+
+#: /includes/theme-widget.php:963
+msgid "Icon Title"
+msgstr ""
+
+#: /includes/theme-widget.php:967
+msgid "Icon"
+msgstr ""
+
+#: /includes/theme-widget.php:972
+msgid "Link"
+msgstr ""
+
+#: /includes/theme-widget.php:1020
+msgid "Display some pages as slider."
+msgstr ""
+
+#: /includes/theme-widget.php:1022
+msgid "Cordillera: Sidebar Slider"
+msgstr ""
+
+#: /includes/theme-widget.php:1038
+#, fuzzy
+msgid "Page"
+msgstr "首页分栏"
+
+#: /page.php:59
+#: /single.php:74
+msgid "Pages:"
+msgstr ""
+
+#: /search.php:27
+msgid "No results found"
+msgstr ""

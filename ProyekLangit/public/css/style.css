@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+      font-family: 'Open Sans', sans-serif;
+    }
 .full-width{
   width: 100%;
 }
 .full-height{
   min-height: 864px;
+}
+.btn{
+  border-radius: 10px;
+  
 }
