@@ -14,7 +14,7 @@
         @foreach ($data as $index => $row)
           <tr>
             <td>{{++$index}}</td>
-            <td>{{$row->title}}</td>
+            <td>{{$row->name}}</td>
             <td>Rp. {{number_format($row->price)}}</td>
             <td>
               <div class="row">

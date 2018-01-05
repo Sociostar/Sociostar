@@ -12,6 +12,7 @@
       <title>Proyek Langit</title>
 
       <style media="screen">
+      .navbar-fixed { z-index: 9999; }
       .navbar-text{
         color: #bdbdbd;
       }

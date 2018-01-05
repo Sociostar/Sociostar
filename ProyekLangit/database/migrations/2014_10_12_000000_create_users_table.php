@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             $table->text('address');
             $table->string('photo')->default('avatar/default.png');
-            $table->tinyInteger('type')->default(1)->comment('0 = admin, 1 = User, 2 = NGO');
+            $table->tinyInteger('type')->default(1)->comment('0 = admin, 1 = User, 2 = FP, 3 = NGO');
             $table->rememberToken();
             $table->timestamps();
         });

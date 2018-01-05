@@ -62,15 +62,17 @@
                     </div>
                     <div class="input-field">
                       <select name="type">
-                        <option value="1" disabled>Apakah anda organisasi?</option>
-                        <option value="2">Ya</option>
-                        <option value="1">Tidak</option>
+                        
+                        <option value="1">Penggemar</option>
+                        <option value="2">Idola</option>
+                        <option value="3">Organisasi</option>
                       </select>
+                      <label>Siapakah Anda?</label>
                     </div>
                     <div class="input-field">
                       <div class="file-field input-field">
                         <div class="btn blue">
-                          <span>File</span>
+                          <span><i class="material-icons">insert_photo</i></span>
                           <input type="file" name="photo">
                         </div>
                         <div class="file-path-wrapper">

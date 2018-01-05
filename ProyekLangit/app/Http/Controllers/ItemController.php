@@ -21,6 +21,13 @@ class ItemController extends Controller
         ]);
     }
 
+    public function catalog()
+    {
+      return view('public.catalog',[
+        'data' => Item::where('status', 1)->get()
+      ]);
+    }
+
     public function self(){
       return view('item.self',[
         'data' => Item::where('userId',Auth::id())->get()
@@ -46,15 +53,17 @@ class ItemController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-        'title' => 'required|string|max:255',
-        'desc' => 'required|string',
-        'price' => 'required|numeric'
+        'name' => 'required|string|max:255',
+        'noteFP' => 'required|string',
+        'price' => 'required|numeric',
+        'amount' => 'required|numeric'
       ]);
       $item = Item::create([
         'userId' => Auth::user()->id,
-        'title' => $request->title,
-        'desc' => $request->desc,
+        'name' => $request->name,
+        'noteFP' => $request->noteFP,
         'price' => $request->price,
+        'amount' => $request->amount,
       ]);
       foreach ($request->photo as $photo) {
         $path = $photo->store('item', 'public');

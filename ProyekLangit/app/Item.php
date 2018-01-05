@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Item extends Model
 {
-    protected $fillable = ['userId', 'title', 'desc', 'price', 'status'];
-
+    use SoftDeletes;
+    protected $fillable = ['userId', 'name', 'noteFP', 'desc', 'price', 'amount', 'dueDate', 'status'];
+    protected $dates = ['deleted_at'];
     public function User(){
       return $this->belongsTo('App\User','userId','id');
     }

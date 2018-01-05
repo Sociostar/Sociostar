@@ -7,15 +7,15 @@
       <table>
         <tr>
           <td>Nama barang</td>
-          <td>{{$data->title}}</td>
+          <td>{{$data->name}}</td>
         </tr>
         <tr>
           <td>Nama pemilik</td>
           <td>{{$data->User->name}}</td>
         </tr>
         <tr>
-          <td>Deskripsi</td>
-          <td>{{$data->desc}}</td>
+          <td>Pesan anda untuk barang ini</td>
+          <td>{{$data->noteFP}}</td>
         </tr>
         <tr>
           <td>Harga</td>

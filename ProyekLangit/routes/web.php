@@ -13,8 +13,9 @@
 
 Route::get('/', function () {
     return view('landingpage');
-});
-
+})->name('home');
+//Guest
+Route::get('catalog','ItemController@catalog')->name('catalog.index');
 Auth::routes();
 //Profile
 Route::get('profile','UserController@edit')->name('profile.edit');
@@ -35,4 +36,8 @@ Route::get('transaction/self','TransactionController@self')->name('transaction.s
 Route::get('transaction/history','TransactionController@history')->name('transaction.history');
 Route::post('/transaction/confirmation/{transaction}','TransactionController@confirmation')->name('transaction.confirmation');
 Route::delete('/transaction/delete/{transaction}','TransactionController@destroy')->name('transaction.destroy');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('dashboard');
+//Admin
+Route::get('admin/catalog/fp','AdminController@CatalogFP')->name('admin.catalogFp.index');
+Route::get('admin/catalog/fp/{item}','AdminController@CatalogFPShow')->name('admin.catalogFp.show');
+Route::put('admin/catalog/update/{item}','AdminController@CatalogUpdate')->name('admin.catalog.update');

@@ -2,6 +2,9 @@
 body{
       font-family: 'Open Sans', sans-serif;
     }
+.container-fluid {
+  height: 100%;
+}
 .full-width{
   width: 100%;
 }
@@ -10,5 +13,37 @@ body{
 }
 .btn{
   border-radius: 10px;
-  
+}
+.navbar-fixed { z-index: 9999; }
+.navbar-text{
+  color: #bdbdbd;
+}
+.bg-header{
+  background-image: url('{{asset('img/landingpage/header.png')}}');
+  padding-top: 200px;
+  padding-left: 50px;
+  margin-bottom: 0px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutus{
+  background-image: url('{{asset('img/landingpage/about_us.png')}}');
+  background-size: cover;
+}
+.content1{
+  background-image: url('{{asset('img/landingpage/bg_value.png')}}');
+  background-size: cover;
+}
+.center-content{
+  padding-top: 15%;
+}
+ul#footer li {
+    display:inline;
+    margin: 5%;
+}
+ul#inline-list li {
+    display:inline;
+    margin-right: 5px;
 }

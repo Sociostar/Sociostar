@@ -19,6 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('itemId')->unsigned();
             $table->string('photo')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

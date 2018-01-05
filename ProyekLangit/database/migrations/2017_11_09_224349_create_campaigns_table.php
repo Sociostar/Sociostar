@@ -18,9 +18,11 @@ class CreateCampaignsTable extends Migration
             $table->integer('userId')->unsigned();
             $table->string('title');
             $table->text('desc');
+            $table->integer('target')->default(0);
+            $table->datetime('dueDate')->nullable();
             $table->tinyInteger('status')->default(1)->comment('0 = close, 1 = open');
             $table->timestamps();
-
+            $table->softDeletes();
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
