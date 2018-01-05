@@ -27,6 +27,13 @@ class CampaignController extends Controller
       ]);
     }
 
+    public function publicIndex()
+    {
+      return view('public.campaign',[
+        'data' => Campaign::where('status',1)->get()
+      ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -48,11 +55,17 @@ class CampaignController extends Controller
         $request->validate([
           'title' => 'required|string|max:255',
           'desc' => 'required|string',
+          'target' => 'required|integer',
+          'location' => 'required|string'
         ]);
+        $datetime = date("Y-m-d", strtotime($request->date)).' '.$request->time.':00';
         $campaign = Campaign::create([
           'userId' => Auth::user()->id,
           'title' => $request->title,
           'desc' => $request->desc,
+          'target' => $request->target,
+          'dueDate' => $datetime,
+          'location' => $request->location,
           'status' => 1,
         ]);
         foreach ($request->photo as $photo) {
@@ -76,6 +89,13 @@ class CampaignController extends Controller
         return view('campaign.show',[
           'data' => $campaign
         ]);
+    }
+
+    public function publicShow(Campaign $campaign)
+    {
+      return view('public.campaignShow',[
+        'data' => $campaign
+      ]);
     }
 
     /**

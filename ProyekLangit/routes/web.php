@@ -23,6 +23,8 @@ Route::post('profile','UserController@update')->name('profile.update');
 //Campaign
 Route::resource('campaign','CampaignController');
 Route::get('campaignSelf','CampaignController@self')->name('campaign.self');
+Route::get('campaignPublic/','CampaignController@publicIndex')->name('campaign.public.index');
+Route::get('campaignPublic/{campaign}','CampaignController@publicShow')->name('campaign.public.show');
 //CampaignPhoto
 Route::delete('campaign/photo/delete/','CampaignPhotoController@destroy')->name('campaignPhoto.destroy');
 //Item

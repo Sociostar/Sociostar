@@ -11,4 +11,8 @@ class Campaign extends Model
     public function Photo(){
       return $this->hasMany('App\CampaignPhoto','campaignId','id');
     }
+
+    public function User(){
+      return $this->belongsTo('App\User','userId','id');
+    }
 }

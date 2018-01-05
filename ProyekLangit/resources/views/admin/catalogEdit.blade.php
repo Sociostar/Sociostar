@@ -114,10 +114,6 @@
 </div>
 @endsection
 @push('js')
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-  <script src="{{asset('js/material-datetime-picker.js')}}" charset="utf-8"></script>
-
   <script type="text/javascript">
   $(document).ready(function() {
     $('.datepicker').pickadate({
