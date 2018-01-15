@@ -4,14 +4,15 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
-
+      <link type="text/css" rel="stylesheet" href="asset/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="asset/css/style.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+      <link rel="shortcut icon" type="image/x-icon" href="asset/favicon.ico" />
       <title>Proyek Langit</title>
-      <link rel="shortcut icon" href="assets/favico.ico" />
+
       <style media="screen">
+	  .navbar-fixed { z-index: 9999; }
       .navbar-text{
         color: #bdbdbd;
       }
@@ -19,21 +20,21 @@
         min-height: 684px;
       }
       .bg-header{
-        background-image: url('assets/images/header.png');
+        background-image: url('asset/img/landingpage/header.png');
         background-size: cover;
         padding-top: 200px;
         padding-left: 50px;
       }
       .aboutus{
-        background-image: url('assets/images/about_us.png');
+        background-image: url('asset/img/landingpage/about_us.png');
         background-size: cover;
       }
       .content1{
-        background-image: url('assets/images/bg_value.png');
+        background-image: url('asset/img/landingpage/bg_value.png');
         background-size: cover;
       }
       .center-content{
-        padding-top: 25%;
+        padding-top: 15%;
       }
       ul#footer li {
           display:inline;
@@ -44,49 +45,196 @@
 
     <body>
       <!-- START NAVBAR -->
-      <nav class="white">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo blue-text"><img src="assets/images/nav_logo.png" style="margin: 10px"></a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons grey-text">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#about" class="navbar-text">Tentang Kami</a></li>
-            <li><a href="#benefit" class="navbar-text">Manfaat</a></li>
-            <li><a href="#howtowork" class="navbar-text">Cara Kerja</a></li>
-            <li><a href="#subscribe" class="navbar-text"><button class="btn light-blue lighten-1 white-text">Bantu</button> </a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#about" class="navbar-text">Tentang Kami</a></li>
-            <li><a href="#benefit" class="navbar-text">Manfaat</a></li>
-            <li><a href="#howtowork" class="navbar-text">Cara Kerja</a></li>
-            <li><a href="#subscribe" class="blue-text">Bantu</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav class="white" style="padding-bottom: 10px">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo blue-text"><img src="asset/img/landingpage/nav_logo.png" style="margin: 10px"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons grey-text">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#about" class="navbar-text">Cara Kerja</a></li>
+              <li><a href="#benefit" class="navbar-text">Produk</a></li>
+              <li><a href="#howtowork" class="navbar-text">Campaign</a></li>
+              <li><a href="#howtowork" class="navbar-text">Tentang Kami</a></li>
+              <li><a href="#howtowork" class="navbar-text"><i class="material-icons light-blue-text lighten-1">search</i></a></li>
+              <li><a href="#subscribe" class="navbar-text btn light-blue lighten-1 white-text">Bantu </a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="#about" class="navbar-text">Cara Kerja</a></li>
+              <li><a href="#benefit" class="navbar-text">Produk</a></li>
+              <li><a href="#howtowork" class="navbar-text">Campaign</a></li>
+              <li><a href="#howtowork" class="navbar-text">Tentang Kami</a></li>
+              <li><a href="#subscribe" class="blue-text">Bantu</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
       <!-- END NAVBAR -->
       <!-- START HEADER -->
       <div class="container-fluid">
         <div class="row white-text full-height bg-header section scrollspy" id="home">
-          <div class="col l4">
-            <h2>Buatlah Perubahan dan Jadilah Inspirator!</h2>
+          <div class="col l5">
+            <h3><b>Buatlah Perubahan <br> dan Jadilah Inspirator!</b></h3>
             <p>Temukan pengalaman berharga dengan memiliki barang dan bantu orang-orang di sekitarmu! Setiap pembelian barang milik idolamu turut membantu berbagai kegiatan sosial di sekitar kita.</p>
             <a href="#"><button class="btn light-blue lighten-1 white-text">saya ingin membantu!</button> </a>
           </div>
         </div>
       </div>
       <!-- END HEADER -->
-      <!-- START ABOUT -->
-      <div class="container-fluid center-content">
-        <div class="row full-height section scrollspy aboutus" id="about">
-          <div class="col l6 center">
-            <img src="assets/images/logo1.png" class="responsive-img" style="max-height: 250px">
+      <!-- START Content 1 -->
+      <div class="container-fluid full-height aboutus">
+        <div class="row grey-text">
+          <div class="col l5 offset-l1" style="margin-top : 10%">
+            <h4>Temukan Barang <br>Favorit Milik Idolamu!</h4>
+            <p>Temukan dan miliki barang favorite milik idolamu. dengan membeli produk tersebut
+            otomatis kamu telah berpartisipasi dalam membantu campaign sosial yang dilakukan oleh idolamu dan membantu menolong mereka yang membutuhkan.</p>
+            <button class="btn light-blue lighten-1 white-text">Temukan Barang Favoritmu!</button>
           </div>
           <div class="col l6">
-            <h4 class="grey-text text-darken-2">Tentang kami</h4>
-            <p class="grey-text text-darken-1">Sebuah platform penggalangan dana untuk kegiatan sosial melalui penjualan barang eksklusif selebritis sehingga meningkatkan kesadaran isu sosial serta mendekatkan selebriti dengan fansnya.</p>
+            <img class="responsive-img" src="asset/img/landingpage/gambar1.png">
           </div>
         </div>
       </div>
-      <!-- END ABOUT -->
+      <!-- END Content 1 -->
+      <!-- START Content 2 -->
+      <div class="container full-height grey-text">
+        <div class="row">
+          <div class="col l12 center">
+            <h4>Deal Terbaik Untuk Anda!</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="asset/img/landingpage/produk1.png">
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l6">
+                    <h6>Nike Shoes</h6>
+                    <small>Chelsea Islan</small>
+                  </div>
+                  <div class="col l16">
+                    <h6>Rp.50.000.000</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col l1">
+                    <i class="material-icons blue-text">favorite_border</i>
+                  </div>
+                  <div class="col l2">
+                    54.2k
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">bookmark_border</i>
+                  </div>
+                  <div class="col l2">
+                    112
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">share</i>
+                  </div>
+                  <div class="col l2">
+                    2,345
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+              <button class="btn light-blue lighten-1 white-text full-width center">Beli</button>
+              </div>
+            </div>
+          </div>
+          <div class="col l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="asset/img/landingpage/produk2.png">
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l6">
+                    <h6>Hermes Bag</h6>
+                    <small>Laudya Cintya Bella</small>
+                  </div>
+                  <div class="col l16">
+                    <h6>Rp.200.000.000</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col l1">
+                    <i class="material-icons blue-text">favorite_border</i>
+                  </div>
+                  <div class="col l2">
+                    54.2k
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">bookmark_border</i>
+                  </div>
+                  <div class="col l2">
+                    112
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">share</i>
+                  </div>
+                  <div class="col l2">
+                    2,345
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+              <button class="btn light-blue lighten-1 white-text full-width center">Beli</button>
+              </div>
+            </div>
+          </div>
+          <div class="col l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="asset/img/landingpage/produk3.png">
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l6">
+                    <h6>Signed Shirt</h6>
+                    <small>Chelsea Islan</small>
+                  </div>
+                  <div class="col l16">
+                    <h6>Rp.2.000.000</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col l1">
+                    <i class="material-icons blue-text">favorite_border</i>
+                  </div>
+                  <div class="col l2">
+                    54.2k
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">bookmark_border</i>
+                  </div>
+                  <div class="col l2">
+                    112
+                  </div>
+                  <div class="col l1">
+                    <i class="material-icons blue-text">share</i>
+                  </div>
+                  <div class="col l2">
+                    2,345
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+              <button class="btn light-blue lighten-1 white-text full-width center">Beli</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l12 center">
+            <h5 class="blue-text">Lihat Semua Barang <i class="small material-icons blue-text">arrow_forward</i></h5>
+          </div>
+        </div>
+      </div>
+      <!-- END Content 2 -->
       <!-- START CONTENT 1 -->
       <div class="container-fluid full-height content1 blue" style="padding-left: 5%">
         <div class="row">
@@ -110,177 +258,108 @@
         </div>
       </div>
       <!-- END CONTENT 1 -->
-      <!-- START SOLUTION -->
-      <div class="container full-height" style="padding-top: 10%">
-        <div class="row">
-          <div class="col l4 grey-text text-darken-2">
-            <h4>Solusi Win Win Bagi Kita</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="assets/images/public_figure.png">
-                <span class="card-title">Public Figure</span>
-              </div>
-            </div>
-            <p>Lebih dekat lebih bersahabat dengan fans anda sekaligus menjadi pioneer, bergeraklah bersama fans anda untuk membawa perubahan!</p>
-          </div>
-          <div class="col l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="assets/images/ngo.png">
-                <span class="card-title">NGO</span>
-              </div>
-            </div>
-            <p>Tingkatkan awareness dan fundrising apa yang Anda perjuangkan</p>
-          </div>
-          <div class="col l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="assets/images/fans.png">
-                <span class="card-title">Fans</span>
-              </div>
-            </div>
-            <p>Temukan pengalaman berharga langsung dari idolamu sekaligus membantu mereka yang membutuhkan</p>
-          </div>
-        </div>
-      </div>
-      <!-- END SOLUTION -->
-      <!-- START HOW TO WORKS -->
-      <div class="container">
-        <div class="row">
-          <div class="col l3 section scrollspy" id="howtowork">
-            <h4 class="grey-text text-darken-2">Cara Kerja</h4>
-            <p>Membeli dan memberi dalam satu langkah mudah dan temukan pengalaman berharga pada barang idolamu</p>
-          </div>
-          <div class="col l6 push-l3">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="responsive-img" src="assets/images/cara_kerja1.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Menginspirasi<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Menginspirasi<i class="material-icons right">close</i></span>
-                <p>Mendekatkan hubungan antara idola dengan fans mereka melalui penjualan barang eksklusif selebriti</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="responsive-img" src="assets/images/cara_kerja2.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Buat Perubahan<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Buat Perubahan<i class="material-icons right">close</i></span>
-                <p>Mendekatkan hubungan antara idola dengan fans mereka melalui penjualan barang eksklusif selebriti</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l6 push-l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="responsive-img" src="assets/images/cara_kerja3.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Transparansi<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Transparansi<i class="material-icons right">close</i></span>
-                <p>Mendekatkan hubungan antara idola dengan fans mereka melalui penjualan barang eksklusif selebriti</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l6">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="responsive-img" src="assets/images/cara_kerja4.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Jadilah Pelopor<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Jadilah Pelopor<i class="material-icons right">close</i></span>
-                <p>Mendekatkan hubungan antara idola dengan fans mereka melalui penjualan barang eksklusif selebriti</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END HOW TO WORKS -->
       <!-- START SUBSCRIBE -->
-      <div class="container center">
+      <div class="container full-height center center-content">
         <div class="row">
           <div class="col l12">
-            <h5 class="grey-text text-darken-2">Jadilah Pelopor Perubahan!</h5>
-            <p class="grey-text text-darken-1">Dengan membantu kami, apakah kami sudah melakukan hal dengan benar</p>
-            <button class="btn light-blue lighten-1 white-text">saya ingin membantu!</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l12">
-            <img src="assets/images/logo_footer.png" class="responsive-img" style="max-width: 180px; margin: 100px">
+            <h4 class="grey-text text-darken-2">Jadilah pelopor dalam membantu mereka!</h4>
+            <p class="grey-text text-darken-1" style="margin-top: 5%">Temukan pengalaman berharga langsung dari idolamu sekaligus <br> membantu mereka yang membutuhkan</p>
+            <button class="btn light-blue lighten-1 white-text" style="margin-top: 6%">Daftar Menggunakan Email</button>
           </div>
         </div>
       </div>
       <!-- END SUBSCRIBE -->
-      <!-- START FOOTER -->
-      <div class="container-fluid">
-        <div class="row hide-on-small-only">
-          <div class="col l5">
-            <ul id="footer" class="grey-text text-darken-1">
-              <li>Tentang Kami</li>
-              <li>Manfaat</li>
-              <li>Cara Kerja</li>
-              <li>Bantu</li>
-            </ul>
+      
+      <div class="container-fluid aboutus"style="padding-left: 5%;padding-right: 5%;">
+        <div class="row">
+          <div class="col l6">
+              <img src="asset/img/landingpage/gambar2.png" class="responsive-img">
           </div>
-          <div class="col l2 center">
-            <a href="#home" class="btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="material-icons">arrow_upward</i></a>
-          </div>
-          <div class="col l5">
-            <ul id="footer" class="grey-text text-darken-1">
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Line</li>
-            </ul>
+          <div class="col l5 offset-l1 grey-text" style="margin-top: 10%">
+            <h4 style="margin-top: 5%">Bergabunglah Sebagai Influencer Mereka!</h4>
+            <p>Lebih dekat lebih bersahabat dengan fans Anda sekaligus <br>
+            menjadi pioneer, bergeraklah bersama fans Anda untuk membawa perubahan! </p>
+            <button class="btn light-blue lighten-1 white-text" style="margin-top: 10%">Bergabung Sebagai Influencer</button>
           </div>
         </div>
-        <div class="row hide-on-med-and-up">
-          <div class="col s12">
-            <ul id="footer" class="grey-text text-darken-1 center">
-              <li>Tentang Kami</li>
-              <li>Manfaat</li>
-              <li>Cara Kerja</li>
-              <li>Bantu</li>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Line</li>
-            </ul>
+        <div class="row">
+          <div class="col l5 offset-l1 grey-text" style="margin-top: 10%">
+            <h4 style="margin-top: 5%">Bergabunglah Sebagai Non-Governmental Organization!</h4>
+            <p>Tingkatkan awareness dan fundrising apa yang Anda perjuangkan! </p>
+            <button class="btn light-blue lighten-1 white-text" style="margin-top: 10%">Bergabung Sebagai NGO</button>
           </div>
-          <div class="col s12 center">
-            <a href="#home" class="btn-floating btn-large waves-effect waves-light light-blue lighten-1"><i class="material-icons">arrow_upward</i></a>
+          <div class="col l6">
+              <img src="asset/img/landingpage/gambar3.png" class="responsive-img">
           </div>
         </div>
       </div>
-      <!-- END FOOTER -->
+      <div class="container-fluid">
+        <div class="row" style="height: 100px;padding-top: 20px">
+          <div class="col offset-l2 l4 s12">
+            <div class="input-field col s12">
+              <input id="last_name" type="text" class="validate white" style="border-radius: 10px">
+              <label for="last_name">Masukan Alamat Email Anda</label>
+            </div>
+          </div>
+          <div class="col l4 s12">
+            <div class="input-field col s12">
+              <button class="btn green white-text full-width">Daftar Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="page-footer light-blue lighten-1 white-text">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col l4 s12 center">
+              <img src="asset/img/landingpage/white_logo.png" style="width: 75%; margin-top: 10%">
+            </div>
+            <div class="col l2 s6">
+              <ul>
+                <li style="padding-top: 20px"><h5>Cara Kerja Kami</h5></li>
+                <li style="padding-top: 20px">Manfaat</li>
+                <li style="padding-top: 20px">Transparansi</li>
+                <li style="padding-top: 20px">FAQ</li>
+              </ul>
+            </div>
+            <div class="col l2 s6">
+              <ul>
+                <li style="padding-top: 20px"><h5>Produk</h5></li>
+                <li style="padding-top: 20px">Sedang Populer</li>
+                <li style="padding-top: 20px">Kategori</li>
+                <li style="padding-top: 20px">Hot Deals</li>
+              </ul>
+            </div>
+            <div class="col l2 s6">
+              <ul>
+                <li style="padding-top: 20px"><h5>Campaign</h5></li>
+                <li style="padding-top: 20px">Sedang Populer</li>
+                <li style="padding-top: 20px">Terbaru </li>
+                <li style="padding-top: 20px">Campaign Pilihan</li>
+              </ul>
+            </div>
+            <div class="col l2 s6">
+              <ul>
+                <li style="padding-top: 20px"><h5>Tentang Kami</h5></li>
+                <li style="padding-top: 20px">Proyek Langit</li>
+                <li style="padding-top: 20px">Terms</li>
+                <li style="padding-top: 20px">Privasi</li>
+                <li style="padding-top: 20px">Blog</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container center">
+          © 2017 Proyek Langit
+          </div>
+        </div>
+      </footer>
+
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+      <script type="text/javascript" src="asset/js/materialize.min.js"></script>
       <script type="text/javascript">
       $(document).ready(function(){
         $('.scrollspy').scrollSpy();

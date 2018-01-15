@@ -1,2 +1,0 @@
-1. font pakai Open Sans, bisa ambil langsung dari google
-2. Icon ambil dari fa-icon

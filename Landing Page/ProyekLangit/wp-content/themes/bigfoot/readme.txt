@@ -1,1 +1,0 @@
-Check the help section on admin panel or pdf file.
